@@ -21,11 +21,6 @@ function a11yProps(index) {
 }
 
 const useStyles = makeStyles((theme) => ({
-    root: {
-        flexGrow: 1,
-        flexGrow: 1,
-        backgroundColor: theme.palette.background.paper,
-    },
     menuButton: {
         marginRight: theme.spacing(2),
     },
@@ -39,14 +34,14 @@ const tabs = [{name: 'Statistic', pathname: '/statistic'}, {name: 'Countries', p
 function Navbar() {
     const classes = useStyles();
     const [value, setValue] = React.useState(0);
-    const history = useHistory();
+    // const history = useHistory();
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
 
-    const handleRedirect = (pathName) => {
-        history.push(pathName)
-    }
+    // const handleRedirect = (pathName) => {
+    //     history.push(pathName)
+    // }
 
 
     return (
