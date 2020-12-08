@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-const tabs = [{name: 'Statistic', pathname: '/statistic'}, {name: 'Countries', pathname: '/countries'}, {name: 'History', pathname: '/history'},]
+const tabs = [{name: 'Statistic', pathname: '/statistic'}, {name: 'Add new entries', pathname: '/add'}, {name: 'History', pathname: '/history'},]
 
 function Navbar() {
     const classes = useStyles();
