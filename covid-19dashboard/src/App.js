@@ -5,8 +5,9 @@ import 'assets/css/App.css';
 
 import theme from 'theme';
 import { withStyles } from '@material-ui/core/styles';
-import Navbar from 'view/Navbar'
-import StatisticView from 'view/StatisticView/StatisticView'
+import Navbar from 'view/Navbar';
+import StatisticView from 'view/StatisticView';
+import LoginView from 'view/LoginView';
 
 class App extends Component {
   render() {
