@@ -18,6 +18,14 @@ class Statistic extends Component {
         this._fetchStatisticData();
     }
 
+    onSorting = (data) => {
+        let sortedList = data.sort((a, b) => {
+        return (a['country'] <= b['country'] ? -1 : 1)
+        });
+
+        return sortedList
+    }
+
     _fetchStatisticData = () => {
         const options = {
             method: 'GET',
@@ -30,7 +38,7 @@ class Statistic extends Component {
         axios.request(options)
             .then((response) => {
                 this.setState({
-                    data: response.data.response
+                    data: this.onSorting(response.data.response)
                 })
             }).catch(function (error) {
                 console.error(error);
@@ -104,7 +112,7 @@ class Statistic extends Component {
                                     Recovered
                                 </Typography>
                                 <Typography align="center" variant="h6" className={classes.mainColor}>
-                                    <p> {this.state.selectedData.cases.recovered}</p>
+                                    <p> {this.state.selectedData.cases.recovered === null ? 0 : this.state.selectedData.cases.recovered}</p>
                                 </Typography>
                             </Grid>
 
